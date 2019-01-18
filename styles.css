@@ -1,0 +1,97 @@
+body {
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.eyebrow {
+  background: #ab4964;
+  color: #fad7e0;
+  font-weight: 700;
+  display: flex;
+  height: 60px;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.eyebrow .nav--trigger {
+  font-family: "FontAwesome\5", sans-serif;
+  font-size: 2.5rem;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex: 0 0 60px;
+}
+
+.eyebrow .nav--trigger:hover,
+.eyebrow .nav--trigger.open {
+  background: #7a3447;
+}
+
+.eyebrow .login {
+  padding: 10px 20px;
+}
+
+.eyebrow nav.main {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.eyebrow nav.main.open {
+  max-height: 4000px;
+}
+
+.eyebrow nav.main a {
+  background: #7a3447;
+  color: #fad7e0;
+  text-decoration: none;
+  text-transform: uppercase;
+  height: 60px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.eyebrow nav.main a:hover,
+.eyebrow nav.main a:focus {
+  background: #bb8896;
+  color: #7a3447;
+}
+
+@media (max-width: 559px) {
+  .eyebrow nav.main {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    transition: 0.1s ease-out all;
+  }
+}
+
+@media (min-width: 560px) {
+  .eyebrow .nav--trigger {
+    display: none;
+  }
+  .eyebrow .login {
+    flex: 0 1 60px;
+  }
+  .eyebrow nav.main {
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-grow: 2;
+  }
+  .eyebrow nav.main a:nth-child(3) {
+    margin-left: auto;
+  }
+}
